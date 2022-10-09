@@ -7,6 +7,7 @@ interface LinkProps {
 
 const Link = styled.a<LinkProps>`
     display: flex;
+    align-items: center;
     color: ${props => props.theme.colors.primaryText};
     text-decoration: none;
 
@@ -16,7 +17,7 @@ const Link = styled.a<LinkProps>`
     }
 
     :hover {
-        text-decoration: underline;
+        text-decoration: ${props => props.href ? 'underline' : 'none'};
     }
 
     ${props => props.accent && css`

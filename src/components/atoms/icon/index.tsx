@@ -8,7 +8,7 @@ interface IconProps {
 
 const Icon = ({ icon, medium }: IconProps) => {
     const IconPath = ICON_MAPPING[icon]
-    const iconSize = medium ? '26' : '24'
+    const iconSize = medium ? '30' : '20'
 
     return (
         <svg 

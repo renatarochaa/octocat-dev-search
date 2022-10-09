@@ -1,4 +1,9 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+interface ParagraphProps {
+    inactive?: boolean;
+    info?: boolean;
+}
 
 export const H1 = styled.h1`
     font-size: 2rem;
@@ -21,7 +26,17 @@ export const H4 = styled.h4`
     line-height: 1.5rem;
 `
 
-export const Paragraph = styled.p`
+export const Paragraph = styled.p<ParagraphProps>`
     font-size: 1.15rem;
     line-height: 2rem;
+
+    ${props => props.inactive && css`
+        color: ${props => props.theme.colors.secondaryText}
+    `}
+
+    ${props => props.info && css`
+        font-size: 2rem;
+        line-height: 3rem;
+        font-weight: bold;
+    `}
 `

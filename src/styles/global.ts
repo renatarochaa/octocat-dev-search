@@ -13,12 +13,15 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        transition: ease 0.5s;
+        transition: ease 0.2s;
+    }
+
+    html {
+        font-size: 13px;
     }
 
     body {
         font-family: 'Space Mono', monospace; 
-        font-size: 13px;
         color: ${props => props.theme.colors.primaryText};
         background-color: ${props => props.theme.colors.background};
     }

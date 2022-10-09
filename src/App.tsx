@@ -7,11 +7,15 @@ import Icon from './components/atoms/icon'
 import Button from './components/atoms/button'
 import Link from './components/atoms/link'
 import Card from './components/atoms/card'
+import Input from './components/atoms/input'
+import light from './styles/themes/light'
+import ErrorMessage from './components/atoms/error'
+import Grid from './components/atoms/grid'
 
 const App = () => (
   <ThemeProvider theme={dark}>
     <GlobalStyle />
-    <div className="App">
+    <Grid>
       <H1>Teste H1</H1>
       <H2>Teste H2</H2>
       <H3>Teste H3</H3>
@@ -25,6 +29,8 @@ const App = () => (
       <Icon icon="twitter" />
       <Icon icon="website" />
       <Card padding="0.5rem 0.5rem 0.5rem 2rem">
+        <Input type="text" placeholder="Search Github username..." id="teste"  />
+        <ErrorMessage>No results</ErrorMessage>
         <Button>Search</Button>
         <Button inactive>Search</Button>
       </Card>
@@ -43,7 +49,7 @@ const App = () => (
           <Paragraph>Twitter</Paragraph>
         </Link>
       </Card>
-    </div>
+    </Grid>
   </ThemeProvider>
 )
 

@@ -8,7 +8,7 @@ import UserLinks from '../../molecules/userLinks'
 const Profile = () => (
     <Card className="profile">
         <div className="user-info">
-            <Image src="" alt=""  />
+            <Image src="https://avatars.githubusercontent.com/u/583231?v=4" alt="octocat"  />
             <UserInfo />
         </div>
         <div className="user-links">

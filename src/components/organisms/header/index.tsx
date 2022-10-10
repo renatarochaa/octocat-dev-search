@@ -3,10 +3,15 @@ import { H2 } from '../../atoms/typography';
 import ThemeSwitcher from '../../molecules/themeSwitcher';
 import HeaderContainer from './styles';
 
-const Header = () => (
+interface HeaderProps {
+    toggleTheme: () => void
+    theme: string
+}
+
+const Header = ({ toggleTheme, theme }: HeaderProps) => (
     <HeaderContainer>
         <H2>devfinder</H2>
-        <ThemeSwitcher />
+        <ThemeSwitcher onClick={toggleTheme} theme={theme} />
     </HeaderContainer>
 )
 

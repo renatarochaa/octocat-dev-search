@@ -1,9 +1,11 @@
 import styled from 'styled-components'
 
-const SwitcherContainer = styled.div`
+const SwitcherContainer = styled.button`
     display: flex;
     align-items: center;
     color: ${props => props.theme.colors.primaryText};
+    background-color: transparent;
+    border: none;
     letter-spacing: 0.2rem;
     cursor: pointer;
 

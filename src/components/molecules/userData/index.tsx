@@ -3,7 +3,7 @@ import Card from '../../atoms/card'
 import { H4, Paragraph } from '../../atoms/typography'
 
 const UserData = () => (
-    <Card internal padding="1.5rem 3rem">
+    <Card className="user-data">
         <div>
             <H4>Repos</H4>
             <Paragraph info>8</Paragraph>

@@ -12,8 +12,8 @@ const UserLinks = () => (
                 <Paragraph>San Francisco</Paragraph>
             </Link>
             <Link href="https://github.com/" target="_blank">
-                <Icon icon="website" medium />
-                <Paragraph>https://github.com/sdflksafçlksa~lfçkasfçlkasfçlk</Paragraph>
+                <Icon icon="website" />
+                <Paragraph>https://github.com/dlfjsdlçsjdçglksjd</Paragraph>
             </Link>
         </div>
         <div>

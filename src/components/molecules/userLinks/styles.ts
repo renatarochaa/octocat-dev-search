@@ -16,7 +16,17 @@ const LinksContainer = styled.div`
     }
 
     a {
-        margin-bottom: 1rem;
+        margin-bottom: 1.2rem;
+        svg {
+            min-width: 1.6rem;
+        }
+    }
+
+    @media (max-width: 30rem) {
+        flex-direction: column;
+        div {
+            width: 100%;
+        }
     }
 `
 

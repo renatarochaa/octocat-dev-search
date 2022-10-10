@@ -2,10 +2,10 @@ import styled from 'styled-components'
 
 const Input = styled.input`
     font-family: 'Space Mono', monospace;
-    font-size:  1rem;
+    font-size: 1.3rem;
     border: none;
     width: 100%;
-    margin-left: 1rem;
+    margin-left: 2rem;
     caret-color: ${props => props.theme.colors.primary};
     background-color: ${props => props.theme.colors.backgroundLight};
     color: ${props => props.theme.title === 'light' ? 
@@ -19,6 +19,11 @@ const Input = styled.input`
 
     :focus {
         outline: none;
+    }
+
+    @media (max-width: 30rem) {
+        font-size: 1.2rem;
+        margin-left: 1rem;
     }
 `
 

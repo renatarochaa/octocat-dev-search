@@ -9,12 +9,20 @@ export const H1 = styled.h1`
     font-size: 2rem;
     line-height: 3rem;
     font-weight: bold;
+    @media (max-width: 30rem) {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
 `
 
 export const H2 = styled.h2`
     font-size: 1.7rem;
     line-height: 2.5rem;
     font-weight: bold;
+    @media (max-width: 30rem) {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
 `
 
 export const H3 = styled.h3`
@@ -38,5 +46,9 @@ export const Paragraph = styled.p<ParagraphProps>`
         font-size: 2rem;
         line-height: 3rem;
         font-weight: bold;
+        @media (max-width: 30rem) {
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
     `}
 `

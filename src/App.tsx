@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { DefaultTheme, ThemeProvider } from 'styled-components'
 import dark from './styles/themes/dark'
 import GlobalStyle from './styles/global'
@@ -8,13 +8,22 @@ import Header from './components/organisms/header'
 import SearchBar from './components/organisms/search/indext'
 import Profile from './components/organisms/profile'
 import usePersistedState from './utils/usePersistedState'
+import useProfileProvider from './providers/profile'
 
 const App = () => {
+  const { profile, getProfileData } = useProfileProvider()
   const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', dark)
 
   const toggleTheme = () => {
     setTheme(theme.title === 'dark' ? light : dark)
   } 
+
+  useEffect(() => { 
+    getProfileData('octocat') 
+  }, [])
+
+  console.log(profile)
+  
 
   return (
     <ThemeProvider theme={theme}>

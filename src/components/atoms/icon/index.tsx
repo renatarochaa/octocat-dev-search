@@ -16,6 +16,7 @@ const Icon = ({ icon }: IconProps) => {
             height="30"
             viewBox="0 0 1024 1024"
             aria-label={icon}
+            role="img"
         >
             <IconPath />
         </svg>

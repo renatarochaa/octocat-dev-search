@@ -12,9 +12,7 @@ const profileMapper = (data: ProfileData): Profile => {
             year: 'numeric' 
         })
     
-    return data.message ? 
-    { errorMessage: 'No results' } : 
-    {
+    return {
         avatar: {
             url: data.avatar_url,
             alt: name

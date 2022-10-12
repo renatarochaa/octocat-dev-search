@@ -11,7 +11,7 @@ import usePersistedState from './utils/usePersistedState'
 import useProfileProvider from './providers/profile'
 
 const App = () => {
-  const { profile, getProfileData } = useProfileProvider()
+  const { getProfileData } = useProfileProvider()
   const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', dark)
 
   const toggleTheme = () => {
@@ -20,10 +20,7 @@ const App = () => {
 
   useEffect(() => { 
     getProfileData('octocat') 
-  }, [])
-
-  console.log(profile)
-  
+  }, [])    
 
   return (
     <ThemeProvider theme={theme}>

@@ -11,6 +11,11 @@ const Card = styled.div`
     &.search-bar {
         padding: 1rem 1rem 1rem 2.5rem;
         margin-bottom: 2rem;
+        form {
+            width: 100%;
+            display: flex;
+            align-items: center; 
+        }
         svg {
             fill: ${props => props.theme.colors.primary};
             min-width: 2rem;

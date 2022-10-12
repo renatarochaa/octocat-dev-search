@@ -35,11 +35,9 @@ export interface ProfileUserLinks {
     company: ProfileUserLinksItem
 }
 
-export interface ProfileContent {
+export interface Profile {
     avatar: ProfileAvatar
     userInfo: ProfileUserInfo
     userData: ProfileUserData
     userLinks: ProfileUserLinks
 }
-
-export type Profile = ProfileContent | { errorMessage: string }

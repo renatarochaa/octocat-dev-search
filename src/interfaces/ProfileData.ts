@@ -9,9 +9,7 @@ export interface ProfileData {
     bio: string
     twitter_username: string
     public_repos: number
-    repos_url: string
     followers: number
-    followers_url: string
     following: number
     created_at: Date
     message?: string

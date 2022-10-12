@@ -7,7 +7,7 @@ const useProfileProvider = () => {
     const [profile, setProfile] = usePersistedState<Profile>('profile', {} as Profile)
     const [error, setError] = useState<string>('')
 
-    const getProfileData = async (user: string) => {        
+    const getProfileData = async (user: string) => {
         const response = await fetch(`https://api.github.com/users/${user}`)
         const data = await response.json()
 

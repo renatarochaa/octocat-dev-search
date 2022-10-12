@@ -4,18 +4,27 @@ import Image from '../../atoms/image'
 import UserData from '../../molecules/userData'
 import UserInfo from '../../molecules/userInfo'
 import UserLinks from '../../molecules/userLinks'
+import { Profile } from '../../../interfaces'
 
-const Profile = () => (
-    <Card className="profile">
-        <div className="user-info">
-            <Image src="https://avatars.githubusercontent.com/u/583231?v=4" alt="octocat"  />
-            <UserInfo />
-        </div>
-        <div className="user-links">
-            <UserData />
-            <UserLinks />
-        </div>
-    </Card>
-)
+interface ProfileContentProps {
+    data: Profile
+}
 
-export default Profile
+const ProfileContent = ({ data }: ProfileContentProps) => {
+    const { avatar, userInfo, userData, userLinks } = data
+
+    return (
+        <Card className="profile">
+            <div className="user-info">
+                <Image src={avatar.url} alt={avatar.alt}  />
+                <UserInfo data={userInfo} />
+            </div>
+            <div className="user-links">
+                <UserData data={userData} />
+                <UserLinks data={userLinks} />
+            </div>
+        </Card>
+    )
+}
+
+export default ProfileContent

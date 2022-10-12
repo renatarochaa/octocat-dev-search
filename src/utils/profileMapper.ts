@@ -22,20 +22,13 @@ const profileMapper = (data: ProfileData): Profile => {
             username: `@${data.login}`,
             profileUrl: data.html_url,
             bio: data.bio || 'This profile has no bio',
+            hasBio: !!data.bio,
             joinDate: `Joined ${getJoinDate(data.created_at)}`
         },
         userData: {
-            repositories: {
-                number: data.public_repos,
-                url: data.repos_url
-            },
-            followers: {
-                number: data.followers,
-                url: data.followers_url
-            },
-            following: {
-                number: data.following
-            } 
+            repositories: data.public_repos,
+            followers: data.followers,
+            following: data.following 
         },
         userLinks: {
             location: {
@@ -45,7 +38,7 @@ const profileMapper = (data: ProfileData): Profile => {
             website: {
                 available: !!data.blog,
                 content: data.blog || notAvailableContent,
-                url: data.blog
+                url: data.blog || undefined
             },
             twitter: {
                 available: !!data.twitter_username,

@@ -1,18 +1,23 @@
 import React from 'react'
+import { ProfileUserInfo } from '../../../interfaces'
 import Link from '../../atoms/link'
 import { H1, H4, Paragraph } from '../../atoms/typography'
 import InfoContainer from './styles'
 
-const userInfo = () => (
+interface UserInfoProps {
+    data: ProfileUserInfo
+}
+
+const userInfo = ({ data }: UserInfoProps) => (
     <InfoContainer>
         <div>
-            <H1>The Octocat</H1>
-            <Paragraph>Joined 25 Jan 2011</Paragraph>
+            <H1>{data.name}</H1>
+            <Paragraph>{data.joinDate}</Paragraph>
         </div>
-        <Link href="https://github.com/" target="_blank" accent>
-            <H4>@octocat</H4>
+        <Link href={data.profileUrl} target="_blank" accent>
+            <H4>{data.username}</H4>
         </Link>
-        <Paragraph inactive>This profile has no bio</Paragraph>
+        <Paragraph inactive={!data.hasBio}>{data.bio}</Paragraph>
     </InfoContainer>
 )
 

@@ -3,6 +3,7 @@ export interface ProfileUserInfo {
     username: string
     profileUrl: string
     bio: string
+    hasBio: boolean
     joinDate: string
 }
 
@@ -11,15 +12,10 @@ export interface ProfileAvatar {
     alt: string
 }
 
-export interface ProfileUserDataItem {
-    number: number
-    url?: string
-}
-
 export interface ProfileUserData {
-    repositories: ProfileUserDataItem
-    followers: ProfileUserDataItem
-    following: ProfileUserDataItem
+    repositories: number
+    followers: number
+    following: number
 }
 
 export interface ProfileUserLinksItem {

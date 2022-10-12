@@ -22,6 +22,7 @@ const SearchBar = ({ search, error, onSubmit, onChange }: SearchBarProps) => (
                 onChange={onChange}
                 spellCheck={false}
                 placeholder="Search GitHub username..."
+                autoFocus
             />
             <ErrorMessage>{error}</ErrorMessage>
             <Button type="submit">Search</Button> 

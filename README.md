@@ -1,3 +1,4 @@
+
 <p align="center"><img src="public/img/logo.png" width="100"></p>
 
 # devfinder
@@ -6,9 +7,9 @@ Devfinder is an app to search and find devs based on their username. You can rea
 
 ## Screenshots
 
-<img src="public/img/dark-mode.png" width="500">
+<img src="public/img/dark-mode.png" width="800">
 
-<img src="public/img/light-mode.png" width="500">
+<img src="public/img/light-mode.png" width="800">
 
 ## Tech Stack
 

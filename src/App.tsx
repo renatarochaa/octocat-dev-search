@@ -9,9 +9,10 @@ import SearchBar from './components/organisms/search'
 import usePersistedState from './utils/usePersistedState'
 import useProfileProvider from './providers/profile'
 import ProfileContent from './components/organisms/profile'
+import CardSkeleton from './components/molecules/cardSkeleton'
 
 const App = () => {
-  const { profile, error, setError, getProfileData } = useProfileProvider()
+  const { profile, error, loading, setError, getProfileData } = useProfileProvider()
   const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', dark)
   const [search, setSearch] = useState<string>('')
 
@@ -47,7 +48,8 @@ const App = () => {
           onSubmit={handleSubmit}
           onChange={handleInputChange}
         />
-        {profile.userData && <ProfileContent data={profile} />}
+        
+        {loading || !profile.userData ? <CardSkeleton /> : <ProfileContent data={profile} />}
       </Grid>
     </ThemeProvider>
   )

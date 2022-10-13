@@ -9,15 +9,15 @@ interface UserDataProps {
 
 const UserData = ({ data }: UserDataProps) => (
     <Card className="user-data">
-        <div>
+        <div className="user-data__item">
             <H4>Repos</H4>
             <Paragraph info>{data.repositories}</Paragraph>
         </div>
-        <div>
+        <div className="user-data__item">
             <H4>Followers</H4>
             <Paragraph info>{data.followers}</Paragraph>
         </div>
-        <div>
+        <div className="user-data__item">
             <H4>Following</H4>
             <Paragraph info>{data.following}</Paragraph>
         </div>

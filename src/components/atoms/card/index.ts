@@ -22,10 +22,15 @@ const Card = styled.div`
         }
     }
 
-    &.user-data {
+    .user-data {
         padding: 1.5rem 3rem;
         justify-content: space-between;
         background-color: ${props => props.theme.colors.background};
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     &.profile {

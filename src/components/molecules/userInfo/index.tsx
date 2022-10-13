@@ -10,12 +10,12 @@ interface UserInfoProps {
 
 const userInfo = ({ data }: UserInfoProps) => (
     <InfoContainer>
-        <div>
+        <div className="info-container__title">
             <H1>{data.name}</H1>
-            <Paragraph>{data.joinDate}</Paragraph>
+            <Paragraph className="info-container__joindate">{data.joinDate}</Paragraph>
         </div>
         <Link href={data.profileUrl} target="_blank" accent>
-            <H4>{data.username}</H4>
+            <H4 className="info-container__username">{data.username}</H4>
         </Link>
         <Paragraph inactive={!data.hasBio}>{data.bio}</Paragraph>
     </InfoContainer>

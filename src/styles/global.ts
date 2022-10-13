@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        transition: ease 0.2s;
+        transition: ease 0.15s;
     }
 
     html {

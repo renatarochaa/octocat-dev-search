@@ -1,7 +1,9 @@
 import React from 'react'
-import { ProfileUserData } from '../../../interfaces'
+
 import Card from '../../atoms/card'
 import { H4, Paragraph } from '../../atoms/typography'
+
+import { ProfileUserData } from '../../../interfaces'
 
 interface UserDataProps {
     data: ProfileUserData

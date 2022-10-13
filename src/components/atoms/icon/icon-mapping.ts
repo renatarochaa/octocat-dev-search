@@ -1,10 +1,10 @@
-import company from '../../../assets/icons/company';
-import location from '../../../assets/icons/location'
+import sun from '../../../assets/icons/sun'
 import moon from '../../../assets/icons/moon'
 import search from '../../../assets/icons/search'
-import sun from '../../../assets/icons/sun'
 import twitter from '../../../assets/icons/twitter'
+import company from '../../../assets/icons/company';
 import website from '../../../assets/icons/website'
+import location from '../../../assets/icons/location'
 
 export type IconItem = keyof typeof ICON_MAPPING
 

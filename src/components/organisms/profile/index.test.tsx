@@ -1,7 +1,10 @@
-import { render, screen } from "@testing-library/react"
 import React from "react"
-import ProfileContent from "."
+
+import { render, screen } from "@testing-library/react"
+
 import TestWrapper from "../../../utils/testWrapper"
+
+import ProfileContent from "."
 
 const testData = {
     avatar: {

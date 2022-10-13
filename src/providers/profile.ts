@@ -1,7 +1,9 @@
 import { useState } from "react"
-import { Profile } from "../interfaces"
+
 import profileMapper from "../utils/profileMapper"
 import usePersistedState from "../utils/usePersistedState"
+
+import { Profile } from "../interfaces"
 
 const useProfileProvider = () => {
     const [profile, setProfile] = usePersistedState<Profile>('profile', {} as Profile)

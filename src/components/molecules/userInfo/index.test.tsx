@@ -1,8 +1,9 @@
-import { render, screen } from "@testing-library/react"
-import userEvent from "@testing-library/user-event"
 import React from "react"
-import UserInfo from "."
+
+import { render, screen } from "@testing-library/react"
 import TestWrapper from "../../../utils/testWrapper"
+
+import UserInfo from "."
 
 const testData = {
     bio: "This profile has no bio",

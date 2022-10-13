@@ -1,7 +1,10 @@
-import { render, screen } from "@testing-library/react"
 import React from "react"
-import UserLinks from "."
+
+import { render, screen } from "@testing-library/react"
+
 import TestWrapper from "../../../utils/testWrapper"
+
+import UserLinks from "."
 
 const testData = {
     location: {

@@ -1,4 +1,5 @@
 import React from 'react'
+
 import Card from '../../atoms/card'
 import Link from '../../atoms/link'
 import SkeletonItem from '../../atoms/skeletonItem'

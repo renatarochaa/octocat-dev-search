@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import { DefaultTheme, ThemeProvider } from 'styled-components'
+
 import dark from './styles/themes/dark'
-import GlobalStyle from './styles/global'
-import Grid from './components/atoms/grid'
 import light from './styles/themes/light'
+import GlobalStyle from './styles/global'
+
+import useProfileProvider from './providers/profile'
+import usePersistedState from './utils/usePersistedState'
+
+import Grid from './components/atoms/grid'
 import Header from './components/organisms/header'
 import SearchBar from './components/organisms/search'
-import usePersistedState from './utils/usePersistedState'
-import useProfileProvider from './providers/profile'
-import ProfileContent from './components/organisms/profile'
 import CardSkeleton from './components/molecules/cardSkeleton'
+import ProfileContent from './components/organisms/profile'
 
 const App = () => {
   const { profile, error, loading, setError, getProfileData } = useProfileProvider()
@@ -48,7 +51,6 @@ const App = () => {
           onSubmit={handleSubmit}
           onChange={handleInputChange}
         />
-        
         {loading || !profile.userData ? <CardSkeleton /> : <ProfileContent data={profile} />}
       </Grid>
     </ThemeProvider>

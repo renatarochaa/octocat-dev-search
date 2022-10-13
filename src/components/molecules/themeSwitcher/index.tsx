@@ -1,6 +1,8 @@
-import React from 'styled-components'
+import React from 'react'
+
 import Icon from '../../atoms/icon'
 import { H4 } from '../../atoms/typography'
+
 import SwitcherContainer from './styles'
 
 interface ThemeSwitcherProps {

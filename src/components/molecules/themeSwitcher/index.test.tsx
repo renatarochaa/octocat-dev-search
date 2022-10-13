@@ -1,8 +1,11 @@
+import React from "react"
+
 import { render, screen } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
-import React from "react"
-import ThemeSwitcher from "."
+
 import TestWrapper from "../../../utils/testWrapper"
+
+import ThemeSwitcher from "."
 
 const theme = 'dark'
 const onClick = jest.fn()

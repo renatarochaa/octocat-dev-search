@@ -1,7 +1,10 @@
-import { render, screen } from "@testing-library/react"
 import React from "react"
-import Header from "."
+
+import { render, screen } from "@testing-library/react"
+
 import TestWrapper from "../../../utils/testWrapper"
+
+import Header from "."
 
 const theme = 'dark'
 const onClick = jest.fn()

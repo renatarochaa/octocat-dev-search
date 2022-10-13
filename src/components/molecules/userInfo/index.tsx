@@ -1,7 +1,10 @@
 import React from 'react'
-import { ProfileUserInfo } from '../../../interfaces'
+
 import Link from '../../atoms/link'
 import { H1, H4, Paragraph } from '../../atoms/typography'
+
+import { ProfileUserInfo } from '../../../interfaces'
+
 import InfoContainer from './styles'
 
 interface UserInfoProps {

@@ -1,7 +1,9 @@
 import React, { ReactChild } from "react";
+
 import { ThemeProvider } from "styled-components";
-import GlobalStyle from "../styles/global";
+
 import dark from "../styles/themes/dark";
+import GlobalStyle from "../styles/global";
 
 interface TestWrapperProps {
     children: ReactChild | ReactChild[]

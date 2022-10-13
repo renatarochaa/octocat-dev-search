@@ -1,8 +1,11 @@
 import React from 'react'
-import { ProfileUserLinks } from '../../../interfaces'
+
 import Icon from '../../atoms/icon'
 import Link from '../../atoms/link'
 import { Paragraph } from '../../atoms/typography'
+
+import { ProfileUserLinks } from '../../../interfaces'
+
 import LinksContainer from './styles'
 
 interface UserLinksProps {

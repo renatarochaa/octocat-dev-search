@@ -19,6 +19,7 @@ const SkeletonItem = styled.span<SkeletonItemProps>`
     }
 
     animation: shine-lines 2s 2s infinite linear;
+    animation-delay: 0s;
     color: ${props => props.theme.colors.secondaryText};
     opacity: 0.3;
     background-image: linear-gradient(90deg, currentColor 0px, lightgrey, currentColor 12rem);
